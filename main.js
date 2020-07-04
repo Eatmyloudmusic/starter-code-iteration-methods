@@ -99,22 +99,27 @@ main.append(JSON.stringify(isActiveAgeOver38))
 
 // //Kata 6: filter(), map(), balance of every user from ZENCO company.
 const balanceAtZenco = users
-    .filter(user => user.balance)
-    .map(user => user.company === 'ZENCO')
+.filter(user => user.company === 'ZENCO')
+    .map(user => user.balance)
+    // .filter(user => user.balance)
+    // .map(user => user.company === 'ZENCO')
 main.append(balanceAtZenco)
 const h1k6 = document.createElement("h1")
 h1k6.append('Kata6: .filter, .map')
 main.append(h1k6)
 main.append(JSON.stringify(balanceAtZenco))
 
-// //Kata 7: filter(), includes(), show the age of every user with the 'fugiat' tag.
-const ageWithFugiat = users.filter(user => user.age).includes(user => user.tags === 'fugiat')
 
-    // .filter(user => user.tags === 'fugiat')
-    // .includes(user => user.age)
+
+// //Kata 7: filter(), includes(), map() show the age of every user with the 'fugiat' tag.
+const ageWithFugiat = users
+    .filter(user => user.age)
+    .map(user => user.tags === 'fugiat')
+    // .map(user => user.age)
+
 main.append(ageWithFugiat)
 const h1k7 = document.createElement("h1")
-h1k7.append('Kata7: .filter, .includes')
+h1k7.append('Kata7: .filter, .includes, .map')
 main.append(h1k7)
 main.append(JSON.stringify(ageWithFugiat))
 
