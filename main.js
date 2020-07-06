@@ -113,9 +113,10 @@ main.append(JSON.stringify(balanceAtZenco))
 
 // //Kata 7: filter(), includes(), map() show the age of every user with the 'fugiat' tag.
 const ageWithFugiat = users
-    .filter(user => user.age)
-    .map(user => user.tags === 'fugiat')
-    // .map(user => user.age)
+    .filter(user => user.tags.includes('fugiat'))
+
+    // .map(user => user.tags === 'fugiat')
+    .map(user => user.age)
 
 main.append(ageWithFugiat)
 const h1k7 = document.createElement("h1")
