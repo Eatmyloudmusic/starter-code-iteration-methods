@@ -79,8 +79,8 @@ h1k3.append('Kata3: .some')
 main.append(h1k3)
 main.append(JSON.stringify(ovationProperty))
 
-// //Kata 4: find(), first user with age of 38 in array.
-const firstOver38 = users.find(user => user.age === 38)
+// //Kata 4: find(), first user over the age of 38 in array.
+const firstOver38 = users.find(user => user.age >= 39)
 main.append(firstOver38)
 const h1k4 = document.createElement("h1")
 h1k4.append('Kata4: .find')
